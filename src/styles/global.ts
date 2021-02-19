@@ -26,6 +26,9 @@ export const Text = styled.span<TextInterface>`
         return css`
           font-weight: bold;
           font-size: 70px;
+          @media (max-width: 580px) {
+            font-size: 50px;
+          }
         `;
       case "semi-title":
         return css`
@@ -33,7 +36,7 @@ export const Text = styled.span<TextInterface>`
           margin-top: 1.2rem;
           font-weight: 400;
           font-size: 22px;
-          @media (max-width: 1100px) {
+          @media (max-width: 720px) {
             width: 90%;
           }
         `;
@@ -104,7 +107,7 @@ export const ExampleDiv = styled.div`
 
 export const MainDiv = styled(ExampleDiv)`
   width: 80%;
-  margin: 5rem auto;
+  margin: 3rem auto;
   flex-direction: column;
   text-align: center;
   @media (max-width: 580px) {
@@ -113,6 +116,8 @@ export const MainDiv = styled(ExampleDiv)`
 `;
 
 export const Footer = styled.footer`
+  position: absolute;
+  bottom: 1rem;
   width: 80%;
   display: flex;
   flex-direction: row;
