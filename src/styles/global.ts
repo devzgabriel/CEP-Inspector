@@ -78,7 +78,7 @@ export const Text = styled.span<TextInterface>`
         `;
       case "info-title":
         return css`
-          margin: 1.4rem auto 0;
+          margin: 2rem auto 1rem;
           font-weight: 700;
           font-size: 30px;
           color: ${(props) => props.theme.colors.alternativeText};
@@ -124,7 +124,7 @@ export const Footer = styled.footer`
   align-items: center;
   justify-content: space-between;
   @media (max-width: 700px) {
-    width: 100%;
+    width: 90%;
   }
 `;
 

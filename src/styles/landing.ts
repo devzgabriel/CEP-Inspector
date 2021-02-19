@@ -17,7 +17,7 @@ export const Form = styled.form`
   align-items: center;
   justify-content: space-between;
   border-radius: 30px;
-  margin: 8rem auto 5rem;
+  margin: 10rem auto 5rem;
   @media (max-width: 900px) {
     width: 90%;
   }
