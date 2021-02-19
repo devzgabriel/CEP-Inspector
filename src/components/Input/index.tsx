@@ -4,9 +4,23 @@ import { TextInput } from "./styles";
 
 interface InputInterface {
   placeholder: string;
-  ref: any;
+  value: any;
+  onChange: any;
+  maxLength?: number;
 }
 
-export default function Input({ placeholder, ref }: InputInterface) {
-  return <TextInput placeholder={placeholder} ref={ref} />;
+export default function Input({
+  placeholder,
+  value,
+  onChange,
+  maxLength,
+}: InputInterface) {
+  return (
+    <TextInput
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+      maxLength={maxLength}
+    />
+  );
 }
