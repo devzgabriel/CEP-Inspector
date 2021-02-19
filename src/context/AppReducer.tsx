@@ -31,6 +31,15 @@ export const initialState = {
 
 export default function reducer(state: StateType, action: ActionType) {
   switch (action.type) {
+    case "UPDATE_THEME": {
+      const { theme } = state;
+      const newTheme = theme === "light" ? "dark" : "light";
+
+      const newState = { ...state, theme: newTheme };
+      localStorage.setItem("ghfinder:localTheme", JSON.stringify(newTheme));
+
+      return newState;
+    }
     case "UPDATE_CEP": {
       const newCep = action.payload;
       localStorage.setItem("cep-inspector:localCep", JSON.stringify(newCep));
