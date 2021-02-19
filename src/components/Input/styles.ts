@@ -18,9 +18,6 @@ export const TextInput = styled.input`
   }
 
   ::placeholder {
-    color: ${(props) => props.theme.colors.background};
-  }
-  @media (max-width: 700px) {
-    border-radius: 10px;
+    color: #c1c1c1;
   }
 `;

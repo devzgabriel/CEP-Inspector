@@ -18,8 +18,12 @@ export const Form = styled.form`
   justify-content: space-between;
   border-radius: 30px;
   margin: 8rem auto 7.4rem;
-  @media (max-width: 700px) {
+  @media (max-width: 900px) {
     width: 90%;
+  }
+  @media (max-width: 580px) {
+    width: 100%;
+    margin: 5rem auto 5rem;
   }
 `;
 
@@ -47,7 +51,5 @@ export const ButtonSubmit = styled.button.attrs({
     opacity: 0.8;
   }
   @media (max-width: 700px) {
-    border-radius: 10px;
-    margin-top: 1rem;
   }
 `;

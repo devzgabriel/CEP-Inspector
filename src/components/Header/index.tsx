@@ -27,15 +27,15 @@ export default function Header() {
 
       <Text font="header-title">CEP Inspector</Text>
       <ThemeDiv>
-        <Text font="header-theme-text">Tema</Text>
+        <Text font="header-theme">Tema</Text>
         <Switch
           onChange={handleToggleTheme}
           checked={state.theme === "dark"}
           checkedIcon={false}
           uncheckedIcon={false}
-          height={10}
-          width={40}
-          handleDiameter={20}
+          height={8}
+          width={30}
+          handleDiameter={15}
           onColor={colors.text}
           offColor={colors.background}
           offHandleColor={colors.background}

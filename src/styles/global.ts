@@ -33,7 +33,7 @@ export const Text = styled.span<TextInterface>`
           margin-top: 1.2rem;
           font-weight: 400;
           font-size: 22px;
-          @media (max-width: 700px) {
+          @media (max-width: 1100px) {
             width: 90%;
           }
         `;
@@ -41,34 +41,56 @@ export const Text = styled.span<TextInterface>`
         return css`
           margin: 0.4rem 0;
           font-weight: 400;
-          font-size: 18px;
-          /* @media (max-width: 700px) {
-            margin: 7rem auto 1rem;
-          } */
+          font-size: 16px;
         `;
       case "author":
         return css`
           font-weight: 400;
           font-size: 18px;
         `;
-      case "theme-text":
+      case "theme":
         return css`
           font-weight: 400;
           font-size: 18px;
           margin-right: 0.4rem;
         `;
-      case "header-theme-text":
+      case "header-theme":
         return css`
           font-weight: 400;
           font-size: 18px;
           margin-right: 0.4rem;
           color: ${(props) => props.theme.colors.alternativeText};
+          @media (max-width: 700px) {
+            font-size: 14px;
+          }
         `;
       case "header-title":
         return css`
           font-weight: 700;
           font-size: 26px;
           color: ${(props) => props.theme.colors.alternativeText};
+          @media (max-width: 700px) {
+            font-size: 18px;
+          }
+        `;
+      case "info-title":
+        return css`
+          margin: 1.4rem auto 0;
+          font-weight: 700;
+          font-size: 30px;
+          color: ${(props) => props.theme.colors.alternativeText};
+          @media (max-width: 1200px) {
+            margin-bottom: 1rem;
+          }
+        `;
+      case "info-span":
+        return css`
+          font-weight: 700;
+          font-size: 22px;
+          color: ${(props) => props.theme.colors.alternativeText};
+          @media (max-width: 1200px) {
+            margin: 0.8rem 0;
+          }
         `;
     }
   }};
@@ -85,15 +107,20 @@ export const MainDiv = styled(ExampleDiv)`
   margin: 5rem auto;
   flex-direction: column;
   text-align: center;
+  @media (max-width: 580px) {
+    margin: 2rem auto;
+  }
 `;
 
 export const Footer = styled.footer`
   width: 80%;
-  /* margin: 0.5rem; */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 `;
 
 export const ThemeDiv = styled.div`

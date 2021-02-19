@@ -8,3 +8,40 @@ export const Container = styled.div`
   flex-direction: column;
   background: ${(props) => props.theme.colors.background};
 `;
+
+export const InfoMain = styled.main`
+  width: 70%;
+  margin: 3rem auto;
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+
+  border-radius: 30px;
+  background: ${(props) => props.theme.colors.secundary};
+`;
+
+export const InfoDiv = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+`;
+
+export const InfoSection = styled.section`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+
+  margin-left: 7rem;
+
+  @media (max-width: 1200px) {
+    margin-left: 0;
+    align-items: center;
+  }
+`;

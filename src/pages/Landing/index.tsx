@@ -13,10 +13,10 @@ import Input from "../../components/Input";
 
 function Landing() {
   const history = useHistory();
-  const [cepNumber, setCepNumber] = useState("");
-
   const { state, dispatch } = useContext(AppContext);
   const { colors } = useContext(ThemeContext);
+
+  const [cepNumber, setCepNumber] = useState("");
 
   function setValidCepNumber(value: any) {
     value = String(value).replace(/\D/g, "");
@@ -76,7 +76,7 @@ function Landing() {
           <Text font="author">Por Gabriel Silva</Text>
 
           <ThemeDiv>
-            <Text font="theme-text">Tema</Text>
+            <Text font="theme">Tema</Text>
             <Switch
               onChange={handleToggleTheme}
               checked={state.theme === "dark"}

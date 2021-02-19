@@ -30,4 +30,8 @@ export const HomeButton = styled.button`
   &:hover {
     opacity: 0.8;
   }
+
+  @media (max-width: 700px) {
+    font-size: 14px;
+  }
 `;
