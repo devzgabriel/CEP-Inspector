@@ -4,7 +4,7 @@ import Switch from "react-switch";
 import { ThemeContext } from "styled-components";
 import { AppContext } from "../../context/AppContext";
 
-import { Text, ExampleDiv } from "../../styles/global";
+import { Text, ThemeDiv } from "../../styles/global";
 import { HeaderDiv, HomeButton } from "./styles";
 
 export default function Header() {
@@ -25,8 +25,9 @@ export default function Header() {
     <HeaderDiv>
       <HomeButton onClick={handleGoHome}>Voltar</HomeButton>
 
-      <ExampleDiv>
-        <Text font="dark-text">Dark Mode</Text>
+      <Text font="header-title">CEP Inspector</Text>
+      <ThemeDiv>
+        <Text font="header-theme-text">Tema</Text>
         <Switch
           onChange={handleToggleTheme}
           checked={state.theme === "dark"}
@@ -35,11 +36,11 @@ export default function Header() {
           height={10}
           width={40}
           handleDiameter={20}
-          onColor={colors.primary}
-          offColor={colors.primary}
-          offHandleColor={colors.primary}
+          onColor={colors.text}
+          offColor={colors.background}
+          offHandleColor={colors.background}
         />
-      </ExampleDiv>
+      </ThemeDiv>
     </HeaderDiv>
   );
 }

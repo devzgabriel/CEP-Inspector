@@ -17,7 +17,7 @@ export const Form = styled.form`
   align-items: center;
   justify-content: space-between;
   border-radius: 30px;
-  margin: 8rem auto 8rem;
+  margin: 8rem auto 7.4rem;
   @media (max-width: 700px) {
     width: 90%;
   }
@@ -33,10 +33,10 @@ export const ButtonSubmit = styled.button.attrs({
 
   height: 2.8rem;
   padding: 20px;
-  margin-top: 1.6rem;
+  margin-top: 1.4rem;
 
   background: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.alternativeText};
   font: 400 1rem Poppins;
 
   border: none;

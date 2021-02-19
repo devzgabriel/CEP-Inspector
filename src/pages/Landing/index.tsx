@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { ThemeContext } from "styled-components";
-
 import { AppContext } from "../../context/AppContext";
 
-import { Text, MainDiv } from "../../styles/global";
+import Switch from "react-switch";
+import { ThemeContext } from "styled-components";
+
+import { Text, MainDiv, Footer, ThemeDiv } from "../../styles/global";
 import { Container, Form, ButtonSubmit } from "../../styles/landing";
 import Input from "../../components/Input";
 
@@ -41,6 +42,10 @@ function Landing() {
     //if err: alert user
   }
 
+  function handleToggleTheme() {
+    dispatch({ type: "UPDATE_THEME", payload: null });
+  }
+
   return (
     <Container id="page-landing">
       <MainDiv>
@@ -67,7 +72,26 @@ function Landing() {
           <ButtonSubmit>Inspecionar</ButtonSubmit>
         </Form>
 
-        <Text font="author">Por Gabriel Silva</Text>
+        <Footer>
+          <Text font="author">Por Gabriel Silva</Text>
+
+          <ThemeDiv>
+            <Text font="theme-text">Tema</Text>
+            <Switch
+              onChange={handleToggleTheme}
+              checked={state.theme === "dark"}
+              checkedIcon={false}
+              uncheckedIcon={false}
+              height={10}
+              width={40}
+              handleDiameter={20}
+              onColor={colors.primary}
+              offColor={colors.primary}
+              offHandleColor={colors.primary}
+              onHandleColor={colors.primary}
+            />
+          </ThemeDiv>
+        </Footer>
       </MainDiv>
     </Container>
   );

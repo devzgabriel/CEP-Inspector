@@ -42,15 +42,33 @@ export const Text = styled.span<TextInterface>`
           margin: 0.4rem 0;
           font-weight: 400;
           font-size: 18px;
-          @media (max-width: 700px) {
+          /* @media (max-width: 700px) {
             margin: 7rem auto 1rem;
-          }
+          } */
         `;
       case "author":
         return css`
-          margin: 0 0 0.5rem;
           font-weight: 400;
           font-size: 18px;
+        `;
+      case "theme-text":
+        return css`
+          font-weight: 400;
+          font-size: 18px;
+          margin-right: 0.4rem;
+        `;
+      case "header-theme-text":
+        return css`
+          font-weight: 400;
+          font-size: 18px;
+          margin-right: 0.4rem;
+          color: ${(props) => props.theme.colors.alternativeText};
+        `;
+      case "header-title":
+        return css`
+          font-weight: 700;
+          font-size: 26px;
+          color: ${(props) => props.theme.colors.alternativeText};
         `;
     }
   }};
@@ -67,4 +85,19 @@ export const MainDiv = styled(ExampleDiv)`
   margin: 5rem auto;
   flex-direction: column;
   text-align: center;
+`;
+
+export const Footer = styled.footer`
+  width: 80%;
+  /* margin: 0.5rem; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const ThemeDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `;
