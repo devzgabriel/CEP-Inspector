@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <HeaderDiv>
-      <HomeButton onClick={handleGoHome}>Ir para Home</HomeButton>
+      <HomeButton onClick={handleGoHome}>Voltar</HomeButton>
 
       <ExampleDiv>
         <Text font="dark-text">Dark Mode</Text>

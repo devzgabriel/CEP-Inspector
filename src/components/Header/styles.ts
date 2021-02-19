@@ -8,7 +8,7 @@ export const HeaderDiv = styled.div`
   justify-content: space-between;
   align-items: center;
   background: ${(props) => props.theme.colors.secundary};
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.background};
   @media (max-width: 700px) {
     padding: 0 1rem;
   }
@@ -24,7 +24,7 @@ export const HomeButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.background};
   &:hover {
     opacity: 0.8;
   }

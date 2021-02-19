@@ -10,7 +10,7 @@ export default createGlobalStyle`
   body{
     background:${(props) => props.theme.colors.background};
     font-size: 14px;
-    font-family:"Inter", sans-serif;
+    font-family:"Nunito", sans-serif;
   }
 `;
 
@@ -29,18 +29,18 @@ export const Text = styled.span<TextInterface>`
         `;
       case "semi-title":
         return css`
-          width: 50%;
+          width: 35%;
           margin-top: 1.2rem;
           font-weight: 400;
-          font-size: 24px;
+          font-size: 22px;
           @media (max-width: 700px) {
             width: 90%;
           }
         `;
       case "paragraph":
         return css`
-          margin: 9rem 0 1rem;
-          font-weight: 500;
+          margin: 0.4rem 0;
+          font-weight: 400;
           font-size: 18px;
           @media (max-width: 700px) {
             margin: 7rem auto 1rem;
@@ -48,7 +48,7 @@ export const Text = styled.span<TextInterface>`
         `;
       case "author":
         return css`
-          margin: 1rem 0 0.5rem;
+          margin: 0 0 0.5rem;
           font-weight: 400;
           font-size: 18px;
         `;
@@ -60,4 +60,11 @@ export const ExampleDiv = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+`;
+
+export const MainDiv = styled(ExampleDiv)`
+  width: 80%;
+  margin: 5rem auto;
+  flex-direction: column;
+  text-align: center;
 `;
