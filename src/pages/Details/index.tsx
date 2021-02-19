@@ -1,27 +1,45 @@
 import React, { useContext } from "react";
-import { useHistory } from "react-router-dom";
-import { ThemeContext } from "styled-components";
 
 import { AppContext } from "../../context/AppContext";
 
-import { Container } from "../../styles/details";
+import { Text } from "../../styles/global";
 
-// import api from "../../services/api";
+import {
+  Container,
+  InfoMain,
+  InfoDiv,
+  InfoSection,
+} from "../../styles/details";
+
 import Header from "../../components/Header";
 
 function Landing() {
-  const history = useHistory();
-
   const { state, dispatch } = useContext(AppContext);
-  const { colors } = useContext(ThemeContext);
-
-  function handleGoToLanding(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-  }
 
   return (
     <Container id="page-details">
       <Header />
+      <InfoMain>
+        <Text font="info-title">Informações que encontramos</Text>
+
+        <InfoDiv>
+          <InfoSection>
+            <Text font="info-span">CEP: 12345-678</Text>
+            <Text font="info-span">Logradouro: Praça da Sé</Text>
+            <Text font="info-span">Complemento: lado ímpar</Text>
+            <Text font="info-span">Bairro: Sé</Text>
+            <Text font="info-span">Localidade: São Paulo</Text>
+          </InfoSection>
+
+          <InfoSection>
+            <Text font="info-span">UF: SP</Text>
+            <Text font="info-span">IBGE: 3550308</Text>
+            <Text font="info-span">GIA: 1004</Text>
+            <Text font="info-span">DDD: 11</Text>
+            <Text font="info-span">Siafi: 7107</Text>
+          </InfoSection>
+        </InfoDiv>
+      </InfoMain>
     </Container>
   );
 }
