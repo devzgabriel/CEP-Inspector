@@ -55,3 +55,9 @@ export const Text = styled.span<TextInterface>`
     }
   }};
 `;
+
+export const ExampleDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;

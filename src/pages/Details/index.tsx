@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { ThemeContext } from "styled-components";
 
@@ -6,7 +6,8 @@ import { AppContext } from "../../context/AppContext";
 
 import { Container } from "../../styles/details";
 
-import api from "../../services/api";
+// import api from "../../services/api";
+import Header from "../../components/Header";
 
 function Landing() {
   const history = useHistory();
@@ -18,7 +19,11 @@ function Landing() {
     event.preventDefault();
   }
 
-  return <Container id="page-details"></Container>;
+  return (
+    <Container id="page-details">
+      <Header />
+    </Container>
+  );
 }
 
 export default Landing;
