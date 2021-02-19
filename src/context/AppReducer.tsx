@@ -45,7 +45,10 @@ export default function reducer(state: StateType, action: ActionType) {
       const newTheme = theme === "light" ? "dark" : "light";
 
       const newState = { ...state, theme: newTheme };
-      localStorage.setItem("ghfinder:localTheme", JSON.stringify(newTheme));
+      localStorage.setItem(
+        "cep-inspector:localTheme",
+        JSON.stringify(newTheme)
+      );
 
       return newState;
     }
