@@ -1,4 +1,4 @@
-export interface CpfInterface {
+export interface CepInterface {
   cep: string;
   logradouro: string;
   complemento: string;
@@ -13,7 +13,7 @@ export interface CpfInterface {
 
 interface StateType {
   theme: string;
-  cep: CpfInterface;
+  cep: CepInterface;
 }
 
 interface ActionType {
