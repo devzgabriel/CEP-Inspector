@@ -14,7 +14,9 @@ import {
 import Header from "../../components/Header";
 
 function Landing() {
-  const { state, dispatch } = useContext(AppContext);
+  const {
+    state: { cep },
+  } = useContext(AppContext);
 
   return (
     <Container id="page-details">
