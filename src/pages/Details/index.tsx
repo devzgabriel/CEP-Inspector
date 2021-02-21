@@ -13,10 +13,29 @@ import {
 
 import Header from "../../components/Header";
 
-function Landing() {
+function Details() {
   const {
     state: { cep },
   } = useContext(AppContext);
+
+  console.log(cep[0]);
+
+  const cepInfo = cep[0];
+
+  const verifiedData = {
+    cep: cepInfo.cep !== "" ? cepInfo.cep : "Sem dados",
+    logradouro: cepInfo.logradouro !== "" ? cepInfo.logradouro : "Sem dados",
+    complemento: cepInfo.complemento !== "" ? cepInfo.complemento : "Sem dados",
+    bairro: cepInfo.bairro !== "" ? cepInfo.bairro : "Sem dados",
+    localidade: cepInfo.localidade !== "" ? cepInfo.localidade : "Sem dados",
+    uf: cepInfo.uf !== "" ? cepInfo.uf : "Sem dados",
+    ibge: cepInfo.ibge !== "" ? cepInfo.ibge : "Sem dados",
+    gia: cepInfo.gia !== "" ? cepInfo.gia : "Sem dados",
+    ddd: cepInfo.ddd !== "" ? cepInfo.ddd : "Sem dados",
+    siafi: cepInfo.siafi !== "" ? cepInfo.siafi : "Sem dados",
+  };
+
+  console.log(verifiedData);
 
   return (
     <Container id="page-details">
@@ -26,19 +45,21 @@ function Landing() {
 
         <InfoDiv>
           <InfoSection>
-            <Text font="info-span">CEP: 12345-678</Text>
-            <Text font="info-span">Logradouro: Praça da Sé</Text>
-            <Text font="info-span">Complemento: lado ímpar</Text>
-            <Text font="info-span">Bairro: Sé</Text>
-            <Text font="info-span">Localidade: São Paulo</Text>
+            <Text font="info-span">CEP: {verifiedData.cep} </Text>
+            <Text font="info-span">Logradouro: {verifiedData.logradouro} </Text>
+            <Text font="info-span">
+              Complemento: {verifiedData.complemento}{" "}
+            </Text>
+            <Text font="info-span">Bairro: {verifiedData.bairro} </Text>
+            <Text font="info-span">Localidade: {verifiedData.localidade} </Text>
           </InfoSection>
 
           <InfoSection>
-            <Text font="info-span">UF: SP</Text>
-            <Text font="info-span">IBGE: 3550308</Text>
-            <Text font="info-span">GIA: 1004</Text>
-            <Text font="info-span">DDD: 11</Text>
-            <Text font="info-span">Siafi: 7107</Text>
+            <Text font="info-span">UF: {verifiedData.uf}</Text>
+            <Text font="info-span">IBGE: {verifiedData.ibge}</Text>
+            <Text font="info-span">GIA: {verifiedData.gia}</Text>
+            <Text font="info-span">DDD: {verifiedData.ddd}</Text>
+            <Text font="info-span">Siafi: {verifiedData.siafi}</Text>
           </InfoSection>
         </InfoDiv>
       </InfoMain>
@@ -46,4 +67,4 @@ function Landing() {
   );
 }
 
-export default Landing;
+export default Details;

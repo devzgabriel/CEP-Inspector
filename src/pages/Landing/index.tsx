@@ -9,7 +9,7 @@ import { Text, MainDiv, Footer, ThemeDiv } from "../../styles/global";
 import { Container, Form, ButtonSubmit } from "../../styles/landing";
 import Input from "../../components/Input";
 
-// import api from "../../services/api";
+import api from "../../services/api";
 
 function Landing() {
   const history = useHistory();
@@ -23,23 +23,22 @@ function Landing() {
     setCepNumber(value);
   }
 
-  function handleGoToDetails(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
-    //validate CPF
+  function validateCep() {
     const cepPattern = /\d{8}/g;
     const isValidCep = cepPattern.test(String(cepNumber));
-    console.log(isValidCep);
-    if (!isValidCep)
-      return alert("Esse não é um CEP válido, verifique novamente.");
+    if (!isValidCep) alert("Esse não é um CEP válido, verifique novamente.");
+  }
 
-    //use api
+  async function handleGoToDetails(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
 
-    //dispatch CPF data
+    validateCep();
 
+    const { data }: any = await api.get(`inspect/${cepNumber}`).then();
+    if (data.message) return alert(data.message);
+
+    dispatch({ type: "UPDATE_CEP", payload: data });
     history.push("/details");
-
-    //if err: alert user
   }
 
   function handleToggleTheme() {

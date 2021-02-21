@@ -55,12 +55,20 @@ export default function reducer(state: StateType, action: ActionType) {
     case "UPDATE_CEP": {
       const newCep = action.payload;
       localStorage.setItem("cep-inspector:localCep", JSON.stringify(newCep));
-      return { ...state, Cep: newCep };
+      return { ...state, cep: newCep };
+    }
+    case "UPDATE_CEP_NUMBER": {
+      const newCepNumber = action.payload;
+      localStorage.setItem(
+        "cep-inspector:localCepNumber",
+        JSON.stringify(newCepNumber)
+      );
+      return { ...state, cepNumber: newCepNumber };
     }
 
     case "RESET_CEP": {
       localStorage.clear();
-      return { ...state, Cep: {} };
+      return { ...state, cep: {} };
     }
 
     default:
