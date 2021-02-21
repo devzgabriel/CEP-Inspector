@@ -34,11 +34,15 @@ function Landing() {
 
     validateCep();
 
-    const { data }: any = await api.get(`inspect/${cepNumber}`).then();
-    if (data.message) return alert(data.message);
-
-    dispatch({ type: "UPDATE_CEP", payload: data });
-    history.push("/details");
+    try {
+      const { data }: any = await api.get(`inspect/${cepNumber}`).then();
+      dispatch({ type: "UPDATE_CEP", payload: data });
+      console.log(data);
+      history.push("/details");
+    } catch {
+      console.warn("dont worry, the user will not recive these errors");
+      alert("Esse não é um CEP válido, verifique novamente.");
+    }
   }
 
   function handleToggleTheme() {

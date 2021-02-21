@@ -13,7 +13,7 @@ export interface CepInterface {
 
 interface StateType {
   theme: string;
-  cep: CepInterface;
+  cepInfo: CepInterface;
 }
 
 interface ActionType {
@@ -35,7 +35,7 @@ function getStorageCep() {
 
 export const initialState = {
   theme: getStorageTheme(),
-  cep: getStorageCep(),
+  cepInfo: getStorageCep(),
 };
 
 export default function reducer(state: StateType, action: ActionType) {
@@ -55,21 +55,16 @@ export default function reducer(state: StateType, action: ActionType) {
     case "UPDATE_CEP": {
       const newCep = action.payload;
       localStorage.setItem("cep-inspector:localCep", JSON.stringify(newCep));
-      return { ...state, cep: newCep };
+      return { ...state, cepInfo: newCep };
     }
-    case "UPDATE_CEP_NUMBER": {
-      const newCepNumber = action.payload;
-      localStorage.setItem(
-        "cep-inspector:localCepNumber",
-        JSON.stringify(newCepNumber)
-      );
-      return { ...state, cepNumber: newCepNumber };
-    }
-
-    case "RESET_CEP": {
-      localStorage.clear();
-      return { ...state, cep: {} };
-    }
+    // case "UPDATE_CEP_NUMBER": {
+    //   const newCepNumber = action.payload;
+    //   localStorage.setItem(
+    //     "cep-inspector:localCepNumber",
+    //     JSON.stringify(newCepNumber)
+    //   );
+    //   return { ...state, cepNumber: newCepNumber };
+    // }
 
     default:
       return state;

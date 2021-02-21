@@ -15,10 +15,8 @@ import Header from "../../components/Header";
 
 function Details() {
   const {
-    state: { cep },
+    state: { cepInfo },
   } = useContext(AppContext);
-
-  const cepInfo = cep[0];
 
   const verifiedData = {
     cep: cepInfo.cep !== "" ? cepInfo.cep : "Sem dados",
