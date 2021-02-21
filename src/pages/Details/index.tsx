@@ -18,8 +18,6 @@ function Details() {
     state: { cep },
   } = useContext(AppContext);
 
-  console.log(cep[0]);
-
   const cepInfo = cep[0];
 
   const verifiedData = {
@@ -34,8 +32,6 @@ function Details() {
     ddd: cepInfo.ddd !== "" ? cepInfo.ddd : "Sem dados",
     siafi: cepInfo.siafi !== "" ? cepInfo.siafi : "Sem dados",
   };
-
-  console.log(verifiedData);
 
   return (
     <Container id="page-details">
