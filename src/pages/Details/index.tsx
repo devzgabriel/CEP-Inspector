@@ -42,7 +42,7 @@ function Details() {
             <Text font="info-span">CEP: {verifiedData.cep} </Text>
             <Text font="info-span">Logradouro: {verifiedData.logradouro} </Text>
             <Text font="info-span">
-              Complemento: {verifiedData.complemento}{" "}
+              Complemento: {verifiedData.complemento}
             </Text>
             <Text font="info-span">Bairro: {verifiedData.bairro} </Text>
             <Text font="info-span">Localidade: {verifiedData.localidade} </Text>

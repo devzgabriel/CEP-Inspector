@@ -62,5 +62,6 @@ export const InfoSection = styled.section`
   }
   @media (min-width: 1200px) {
     animation-name: ${DeskLoad};
+    text-align: left;
   }
 `;
