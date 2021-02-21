@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle, css } from "styled-components";
+import styled, { createGlobalStyle, css, keyframes } from "styled-components";
 
 export default createGlobalStyle`
   *{
@@ -105,6 +105,11 @@ export const ExampleDiv = styled.div`
   align-items: center;
 `;
 
+const Load = keyframes`  
+  from { opacity: 0; margin-top:6rem;}
+  to { opacity: 1;margin-top:3rem;}
+`;
+
 export const MainDiv = styled(ExampleDiv)`
   width: 80%;
   margin: 3rem auto;
@@ -113,6 +118,11 @@ export const MainDiv = styled(ExampleDiv)`
   @media (max-width: 580px) {
     margin: 2rem auto;
   }
+  /* Animation */
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-name: ${Load};
 `;
 
 export const Footer = styled.footer`

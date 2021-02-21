@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
@@ -31,6 +31,16 @@ export const InfoDiv = styled.div`
   }
 `;
 
+const DeskLoad = keyframes`  
+  from { opacity: 0; margin-left:1rem;}
+  to { opacity: 1;margin-left:7rem;}
+`;
+
+const MobileLoad = keyframes`  
+  from { opacity: 0; margin-left:-1rem;}
+  to { opacity: 1;margin-left:0;}
+`;
+
 export const InfoSection = styled.section`
   display: flex;
   flex: 1;
@@ -40,8 +50,17 @@ export const InfoSection = styled.section`
 
   margin-left: 7rem;
 
+  /* Animation */
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+  animation-play-state: running;
+
   @media (max-width: 1200px) {
+    animation-name: ${MobileLoad};
     margin-left: 0;
     align-items: center;
+  }
+  @media (min-width: 1200px) {
+    animation-name: ${DeskLoad};
   }
 `;
