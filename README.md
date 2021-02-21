@@ -41,8 +41,11 @@
 
 ### **Instalando e executando o projeto**
 
-_Antes de executar o frontend é necessário que a API esteja executando também_
+_Antes de executar o frontend é necessário que a API esteja executando também!_
+
 _Veja o repositório em:_ [API CPF Inspector](https://github.com/devzgabriel/api-cepInspector)
+
+<br>
 
 No terminal digite todos os comandos abaixo:
 
@@ -65,3 +68,7 @@ yarn start
 ### **Executando testes**
 
 Os testes serão acrescentados em breve!
+
+<hr>
+
+## **Criado por Gabriel Silva**
