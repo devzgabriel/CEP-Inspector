@@ -43,7 +43,7 @@
 
 _Antes de executar o frontend é necessário que a API esteja executando também!_
 
-_Veja o repositório em:_ [API CPF Inspector](https://github.com/devzgabriel/api-cepInspector)
+_Veja o repositório em:_ [API CEP Inspector](https://github.com/devzgabriel/api-cepInspector)
 
 <br>
 
