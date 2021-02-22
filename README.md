@@ -1,8 +1,8 @@
-# CPF Inspector
+# CEP Inspector
 
 ## O objetivo do projeto é fazer com que a consulta de CEP seja algo simples e fácil!
 
-<!-- ### Você já pode testar se quiser! Só clicar nesse link: [CPF Inspector](sem-link) -->
+<!-- ### Você já pode testar se quiser! Só clicar nesse link: [CEP Inspector](sem-link) -->
 
 <hr>
 
